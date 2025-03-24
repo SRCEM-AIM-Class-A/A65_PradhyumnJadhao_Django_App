@@ -7,8 +7,7 @@ StudentProject is a Django-based web application that contains multiple apps dem
 - **Multi-App Structure**: Separate apps (`app1`, `app2`, etc.) with individual static pages.  
 - **Navigation Links**: Home, About, and App2 pages with Django templates.  
 - **Dockerized**: Runs as a containerized application with `Docker`.  
-- **Jenkins Integration**: Automates deployment using a Jenkins pipeline.  
-- **Database Support**: Uses SQLite (by default) but can be switched to PostgreSQL or MySQL.  
+- **Jenkins Integration**: Automates deployment using a Jenkins pipeline.   
 
 Install Dependencies
 pip install -r requirements.txt
@@ -39,13 +38,11 @@ docker run -d --name myjenkins -p 8080:8080 -p 50000:50000 \
 
 Find the admin password using:
 docker exec -it myjenkins cat /var/jenkins_home/secrets/initialAdminPassword
-Access Jenkins at http://localhost:8080/ and enter the password.
+Access Jenkins and enter the password.
 
 3️⃣ Create a New Pipeline
 
 In Jenkins, create a new Pipeline Job.
-
 Use your GitHub repo URL in the SCM (Source Code Management) section.
-
 Jenkins will automatically build and deploy the project.
 
